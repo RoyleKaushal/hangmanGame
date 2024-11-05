@@ -6,8 +6,8 @@ function Home() {
   const navigate = useNavigate();
 
   const [value, setValue] = useState();
-  const [type, setType] = useState("text");
-  const [hideShow, setHideShow] = useState("Hide");
+  const [type, setType] = useState("password");
+  const [hideShow, setHideShow] = useState("Show");
 
   const onHideShowPress = () => {
     if (hideShow == "Show" && type == "password") {
