@@ -12,7 +12,7 @@ function TextInputContainer({
   onSubmitPress,
 }) {
   return (
-    <div className="input-container">
+    <div className="flex flex-col align-center justify-center m-5">
       <TextInput
         label={label}
         placeholder={placeHolder}
@@ -20,14 +20,14 @@ function TextInputContainer({
         setValue={setValue}
         type={type}
       />
-      <div>
+      <div className="flex self-center m-2">
         <Button
           styleType="Secondary"
           text={hideShow}
           onPressHandler={onHideShowPress}
         />
       </div>
-      <div>
+      <div className="flex self-center m-2">
         <Button
           type="submit"
           styleType="Primary"

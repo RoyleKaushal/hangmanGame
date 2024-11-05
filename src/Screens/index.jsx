@@ -1,7 +1,6 @@
 import { useState } from "react";
-import TextInputContainer from "../../Components/TextInputCantainer/TextInputContainer";
 import { useNavigate } from "react-router-dom";
-
+import TextInputContainer from "../Components/TextInputCantainer/TextInputContainer";
 function Home() {
   const navigate = useNavigate();
 

@@ -11,6 +11,8 @@ function Button({
       return "bg-red-500";
     } else if (styleType == "Secondary") {
       return "bg-yellow-500";
+    } else if (styleType == "Won"){
+      return "bg-green-500";
     }
   }
   return (
