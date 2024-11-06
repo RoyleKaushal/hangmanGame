@@ -6,10 +6,13 @@ function TextInputContainer({
   placeHolder,
   value,
   setValue,
+  hint,
+  setHint,
   type,
   hideShow,
   onHideShowPress,
   onSubmitPress,
+  onQuitPress
 }) {
   return (
     <div className="flex flex-col align-center justify-center m-5">
@@ -19,6 +22,12 @@ function TextInputContainer({
         value={value}
         setValue={setValue}
         type={type}
+      />
+      <TextInput
+        label={"Hint"}
+        placeholder={"Enter Hint"}
+        value={hint}
+        setValue={setHint}
       />
       <div className="flex self-center m-2">
         <Button
@@ -33,6 +42,14 @@ function TextInputContainer({
           styleType="Primary"
           text={"Submit"}
           onPressHandler={onSubmitPress}
+        />
+      </div>
+      <div className="flex self-center m-2">
+        <Button
+          type="submit"
+          styleType="error"
+          text={"Quit"}
+          onPressHandler={onQuitPress}
         />
       </div>
     </div>

@@ -12,7 +12,8 @@ function StartGame() {
 
   // By using Props
   const location = useLocation();
-  const originalWord = location.state;
+  const originalWord = location.state.value;
+  const hint = location.state.hint;
   const [guessedLetter, setGuessedLetter] = useState([]);
   const [steps, setSteps] = useState(1);
   const [correctGuess, setCorrectGuess] = useState(0);
@@ -38,6 +39,7 @@ function StartGame() {
   // const {text} = useParams();
 
   return (
+    (originalWord && hint) ?
     <StartGameContainer
       originalWord={originalWord}
       guessedLetter={guessedLetter}
@@ -45,7 +47,11 @@ function StartGame() {
       steps={steps}
       onPressRetry={onPressRetry}
       correctGuess={correctGuess}
-    />
+      hint={hint}
+      onQuitPress={onPressRetry}
+    /> : <>
+      <h1>Something went wrong</h1>
+    </>
   );
 }
 
